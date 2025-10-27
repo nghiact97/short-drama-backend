@@ -2,6 +2,8 @@
 server:
   port: ${PORT:10000}
   address: 0.0.0.0
+  servlet:
+    context-path: /api
 spring:
   # PostgreSQL配置 - Railway自动提供
   datasource:
