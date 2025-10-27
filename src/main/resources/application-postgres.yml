@@ -1,0 +1,25 @@
+# PostgreSQL configuration for free cloud hosting (Render, Railway, Supabase)
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/short_drama}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+  
+server:
+  address: 0.0.0.0
+  port: ${PORT:8101}
+
+mybatis-plus:
+  configuration:
+    # Disable logs in production
+    log-impl: ''
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+

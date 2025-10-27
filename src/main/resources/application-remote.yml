@@ -1,0 +1,16 @@
+# Cấu hình cho kết nối từ xa/cloud
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # Thay đổi YOUR_DATABASE_HOST thành IP hoặc domain của MySQL server
+    # Ví dụ: 
+    # - Local: jdbc:mysql://localhost:3306/short_drama
+    # - Cloud: jdbc:mysql://your-server.com:3306/short_drama
+    # - Ngrok: jdbc:mysql://0.tcp.ngrok.io:XXXXX/short_drama
+    url: "jdbc:mysql://YOUR_DATABASE_HOST:3306/short_drama?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+    username: "root"
+    password: "231297"
+server:
+  address: 0.0.0.0  # Cho phép kết nối từ mọi network interface
+  port: 8101
+
