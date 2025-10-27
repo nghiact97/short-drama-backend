@@ -8,7 +8,7 @@
   "deploy": {
     "runtime": "V2",
     "numReplicas": 1,
-    "startCommand": "java -jar target/backend-0.0.1-SNAPSHOT.jar",
+    "startCommand": "java -jar target/backend-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod",
     "sleepApplication": false,
     "useLegacyStacker": false,
     "multiRegionConfig": {
